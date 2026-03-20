@@ -2,7 +2,7 @@ import './Footer.css'
 
 const SOCIAL_LINKS = [
   { href: 'https://x.com/grindurus', icon: 'x', label: 'X' },
-  { href: 'https://github.com/grindurus', icon: 'github', label: 'GitHub' },
+  { href: 'https://github.com/triplepaniclabs', icon: 'github', label: 'GitHub' },
 ]
 
 function SocialIcons() {

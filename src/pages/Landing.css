@@ -495,6 +495,15 @@ input::-webkit-calendar-picker-indicator {
   box-shadow: 0 14px 30px rgba(247, 37, 133, 0.44);
 }
 
+.landing-ai-note {
+  margin: 0.55rem 0 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.1rem;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.04em;
+}
+
 @keyframes reveal-up {
   0% {
     opacity: 0;

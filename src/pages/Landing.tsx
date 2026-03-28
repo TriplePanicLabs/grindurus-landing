@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type CSSProperties } from 'react'
 import './Landing.css'
 
 const APY = 0.2
@@ -7,6 +7,37 @@ const MARKET_APY = 0.08
 const LABELS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 const STRATEGY_DATA = [100, 108, 106, 118, 122, 120, 130, 135, 132, 142, 145, 148.5]
 const MARKET_DATA = [100, 105, 98, 112, 110, 102, 115, 118, 112, 120, 115, 118.2]
+
+const LEMNISCATE_PATH = (() => {
+  const points: string[] = []
+  const scaleX = 420
+  const scaleY = 320
+
+  for (let i = 0; i <= 64; i++) {
+    const t = (2 * Math.PI * i) / 64
+    const denominator = 1 + Math.sin(t) ** 2
+    const x = (Math.cos(t) / denominator) * scaleX
+    const y = (Math.sin(t) * Math.cos(t) / denominator) * scaleY
+    points.push(`${x.toFixed(1)},${y.toFixed(1)}`)
+  }
+
+  return `M ${points.join(' L ')}`
+})()
+
+const ORBIT_TOKENS = [
+  { symbol: 'USDC', color: '#2775ca', label: '$' },
+  { symbol: 'WETH', color: '#627eea', label: 'W' },
+  { symbol: 'USDT', color: '#26a17b', label: 'T' },
+  { symbol: 'UNI', color: '#ff007a', label: 'U' },
+  { symbol: 'AAVE', color: '#2ebac6', label: 'A' },
+  { symbol: 'DAI', color: '#f4b731', label: 'D' },
+  { symbol: 'WBTC', color: '#f09242', label: 'B' },
+  { symbol: 'LINK', color: '#2a5ada', label: 'L' },
+  { symbol: 'CRV', color: '#40649f', label: 'C' },
+  { symbol: 'MKR', color: '#1aab9b', label: 'M' },
+  { symbol: 'SNX', color: '#00d1ff', label: 'S' },
+  { symbol: 'OP', color: '#ff0420', label: 'O' },
+]
 
 function formatCurrency(value: number): string {
   return value.toLocaleString('en-US', {
@@ -104,6 +135,28 @@ export default function Landing() {
   return (
     <div className="landing">
       <section className="hero-section">
+        <div
+          className="hero-orbit"
+          style={{ '--orbit-path': `path("${LEMNISCATE_PATH}")` } as CSSProperties}
+          aria-hidden
+        >
+          <svg className="hero-orbit-guide" viewBox="-460 -360 920 720" preserveAspectRatio="xMidYMid meet">
+            <path d={LEMNISCATE_PATH} />
+          </svg>
+          {ORBIT_TOKENS.map((token, index) => (
+            <div
+              key={token.symbol}
+              className="hero-orbit-icon"
+              style={{
+                '--token-color': token.color,
+                '--orbit-index': index,
+                '--orbit-total': ORBIT_TOKENS.length,
+              } as CSSProperties}
+            >
+              <span>{token.label}</span>
+            </div>
+          ))}
+        </div>
         <div className="hero-grid-overlay" aria-hidden />
         <div className="hero-content">
           <h1 className="hero-title">GrindURUS</h1>

@@ -9,8 +9,8 @@ export function PartnersSection() {
   ]
 
   return (
-    <section className="py-10 border-y border-white/[0.08] overflow-hidden">
-      <h2 className="font-mono font-bold text-[clamp(1.5rem,4vw,2.25rem)] text-white dark:text-white text-center mb-6">
+    <section className="py-10 border-y border-black/10 dark:border-white/[0.08] overflow-hidden">
+      <h2 className="font-mono font-bold text-[clamp(1.5rem,4vw,2.25rem)] text-black dark:text-white text-center mb-6">
         Integrated with
       </h2>
       <div className="overflow-hidden marquee-mask">
@@ -21,12 +21,12 @@ export function PartnersSection() {
               href={p.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 no-underline text-white/90 dark:text-white/90 flex-shrink-0 transition-all duration-200 hover:opacity-100"
+              className="flex items-center gap-2 no-underline text-[#1a1a1a]/90 dark:text-white/90 flex-shrink-0 transition-all duration-200 hover:opacity-100"
             >
               {p.imgLight ? (
                 <>
-                  <img src={p.img}      alt={p.name} width={40} height={40} className="object-contain block dark:block [data-theme='light']_&:hidden" aria-hidden />
-                  <img src={p.imgLight} alt={p.name} width={40} height={40} className="object-contain hidden dark:hidden [data-theme='light']_&:block" aria-hidden />
+                  <img src={p.img}      alt={p.name} width={40} height={40} className="object-contain hidden dark:block" aria-hidden />
+                  <img src={p.imgLight} alt={p.name} width={40} height={40} className="object-contain block dark:hidden" aria-hidden />
                 </>
               ) : (
                 <img src={p.img} alt={p.name} width={40} height={40} className="object-contain" />

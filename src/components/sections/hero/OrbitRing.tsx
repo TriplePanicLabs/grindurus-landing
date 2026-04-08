@@ -10,7 +10,7 @@ export function OrbitRing() {
       {ORBIT_TOKENS.map((token, i) => (
         <div
           key={token.symbol}
-          className="orbit-icon absolute w-[42px] h-[42px] rounded-full flex items-center justify-center font-bold text-white text-[0.75rem] opacity-70 left-1/2 top-1/2 shadow-[0_0_20px_rgba(255,255,255,0.1)] animate-[orbit-infinity_80s_linear_infinite]"
+          className="orbit-icon absolute w-[42px] h-[42px] rounded-full flex items-center justify-center font-bold text-white text-[0.75rem] opacity-70 left-1/2 top-1/2 shadow-[0_2px_12px_rgba(0,0,0,0.12)] dark:shadow-[0_0_20px_rgba(255,255,255,0.1)] animate-[orbit-infinity_80s_linear_infinite]"
           style={{
             '--orbit-index': i,
             '--orbit-total': ORBIT_TOKENS.length,

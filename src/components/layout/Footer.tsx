@@ -13,7 +13,7 @@ function SocialIcons() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={label}
-          className="w-9 h-9 rounded-full bg-white dark:bg-white text-black dark:text-black flex items-center justify-center transition-all duration-200 hover:opacity-90 hover:scale-105"
+          className="w-9 h-9 rounded-full bg-black/10 dark:bg-white text-black flex items-center justify-center transition-all duration-200 hover:opacity-90 hover:scale-105"
         >
           {icon === 'x' && (
             <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
@@ -33,10 +33,10 @@ function SocialIcons() {
 
 export default function Footer() {
   return (
-    <footer className="bg-black dark:bg-black border-t border-white/15 px-8 py-10 mt-auto">
+    <footer className="bg-white dark:bg-black border-t border-black/15 dark:border-white/15 px-8 py-10 mt-auto">
       <div className="max-w-[1280px] mx-auto flex justify-end items-end">
         <div className="flex flex-col items-end gap-3">
-          <p className="font-mono text-sm text-white/85 m-0">© GrindURUS 2026. All rights reserved.</p>
+          <p className="font-mono text-sm text-[#1a1a1a]/85 dark:text-white/85 m-0">© GrindURUS 2026. All rights reserved.</p>
           <SocialIcons />
         </div>
       </div>

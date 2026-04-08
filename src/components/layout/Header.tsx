@@ -4,7 +4,7 @@ import logo from '@/assets/logo.png'
 
 function Header() {
   return (
-    <header className="w-full sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-md dark:bg-black/95 [data-theme='light']_&:border-black/10 [data-theme='light']_&:bg-white/95">
+    <header className="w-full sticky top-0 z-50 border-b border-black/10 dark:border-white/10 bg-white/95 dark:bg-black/95 backdrop-blur-md">
       <div className="max-w-[1280px] mx-auto px-8 h-[74px] flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 no-underline group">

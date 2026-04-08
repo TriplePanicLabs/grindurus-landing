@@ -31,10 +31,10 @@ export function HeroSection() {
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-[720px] px-8">
         <h1 className="font-mono font-bold text-[clamp(2rem,5vw,3.5rem)] leading-tight flex flex-col gap-1 mb-6">
-          <span className="text-brand-pink dark:text-brand-pink">GrindURUS</span>
-          <span className="text-[0.85em] font-semibold text-white dark:text-white">Automated Market Taker</span>
+          <span className="text-brand-red dark:text-brand-pink">GrindURUS</span>
+          <span className="text-[0.85em] font-semibold text-[#1a1a1a] dark:text-white">Automated Market Taker</span>
         </h1>
-        <p className="font-mono text-[clamp(0.95rem,2vw,1.15rem)] leading-[1.7] text-white/85 dark:text-white/85 mb-8">
+        <p className="font-mono text-[clamp(0.95rem,2vw,1.15rem)] leading-[1.7] text-[#1a1a1a]/80 dark:text-white/85 mb-8">
           multichain price volatility harvester protocol
         </p>
         <Button href={`${APP_URL}/grinders`} size="lg" innerRef={buttonRef}>

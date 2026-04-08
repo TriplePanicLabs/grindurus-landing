@@ -20,17 +20,17 @@ export function StrategySection() {
     (activeToggle === 1 && mintMode === 'sell')
 
   const toggleBtnBase = 'font-mono font-semibold text-sm px-5 py-2 uppercase rounded-lg border-none cursor-pointer transition-all duration-200'
-  const toggleBtnInactive = 'bg-transparent text-white/60 hover:text-white/90'
+  const toggleBtnInactive = 'bg-transparent text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90'
   const toggleBtnActive = 'text-white'
 
   return (
     <section className="py-16 px-8 max-w-[1280px] mx-auto">
       {/* Section heading */}
-      <h2 className="font-mono font-bold text-[clamp(1.5rem,3vw,2rem)] text-white dark:text-white text-center mb-10">
+      <h2 className="font-mono font-bold text-[clamp(1.5rem,3vw,2rem)] text-black dark:text-white text-center mb-10">
         Strategy
       </h2>
 
-      <div className="bg-[#0a0a0a] border border-white/[0.12] rounded-2xl overflow-hidden">
+      <div className="bg-white border-black/10 dark:bg-[#0a0a0a] border dark:border-white/[0.12] rounded-2xl overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[50vh]">
           {/* Visual panel */}
           <div className="relative min-h-[320px] md:min-h-0">
@@ -54,8 +54,8 @@ export function StrategySection() {
             <div className="flex items-center gap-4 mb-5">
               {/* DIRECT */}
               <div className="flex flex-col items-center gap-1.5">
-                <span className="font-mono text-[0.95rem] font-semibold text-white/50 uppercase tracking-wide">DIRECT</span>
-                <div className="flex bg-white/[0.08] rounded-xl p-1">
+                <span className="font-mono text-[0.95rem] font-semibold text-black/50 dark:text-white/50 uppercase tracking-wide">DIRECT</span>
+                <div className="flex bg-black/5 dark:bg-white/[0.08] rounded-xl p-1">
                   <button
                     type="button"
                     onClick={() => { setMintMode('buy'); setActiveToggle(0) }}
@@ -75,12 +75,12 @@ export function StrategySection() {
                 </div>
               </div>
 
-              <span className="font-mono text-sm font-semibold text-white/50 mt-5">OR</span>
+              <span className="font-mono text-sm font-semibold text-black/50 dark:text-white/50 mt-5">OR</span>
 
               {/* INVERSE */}
               <div className="flex flex-col items-center gap-1.5">
-                <span className="font-mono text-[0.95rem] font-semibold text-white/50 uppercase tracking-wide">INVERSE</span>
-                <div className="flex bg-white/[0.08] rounded-xl p-1">
+                <span className="font-mono text-[0.95rem] font-semibold text-black/50 dark:text-white/50 uppercase tracking-wide">INVERSE</span>
+                <div className="flex bg-black/5 dark:bg-white/[0.08] rounded-xl p-1">
                   <button
                     type="button"
                     onClick={() => { setMintMode('sell'); setActiveToggle(1) }}
@@ -101,7 +101,7 @@ export function StrategySection() {
               </div>
             </div>
 
-            <h3 className="font-mono font-semibold text-base text-white dark:text-white mb-4">
+            <h3 className="font-mono font-semibold text-base text-black dark:text-white mb-4">
               {mintMode === 'buy' ? 'Aggressive Buy' : 'Profitable Sell'}
             </h3>
 

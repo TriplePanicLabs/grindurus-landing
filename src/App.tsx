@@ -7,9 +7,9 @@ import './index.css'
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-black dark:bg-black">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-black">
       <Header />
-      <main className="flex-1 relative bg-black dark:bg-black [data-theme='light']_&:bg-white">
+      <main className="flex-1 relative bg-white dark:bg-black">
         <HeroSection />
         <PartnersSection />
         <StrategySection />

@@ -7,10 +7,10 @@ export function HeroSection() {
     /*
      * The section is the coordinate space for the animation.
      * – overflow-hidden: keeps any icon that briefly overshoots clipped
-     * – min-h-[90vh]:    tall enough that the lemniscate has room to breathe on mobile too
+     * – min-h ~70–78vh: keeps orbit room while trimming excess vertical band
      */
     <section
-      className="relative w-full min-h-[90vh] bg-black border-b border-black/10 dark:border-white/[0.08] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[70vh] md:min-h-[76vh] lg:min-h-[78vh] bg-black border-b border-black/10 dark:border-white/[0.08] flex items-center justify-center overflow-hidden"
     >
       {/* ── Background animation layer (opacity handled inside OrbitRing) ── */}
       <OrbitRing />
@@ -21,14 +21,17 @@ export function HeroSection() {
         <h1 className="font-mono font-black text-[clamp(2.5rem,6vw,5rem)] leading-[1.2]">
           <span className="block text-brand-pink text-[1.2em] [text-shadow:0_0_20px_black]">GrindURUS</span>
           <span className="block text-white dark:text-white text-[0.6em] [text-shadow:0_0_20px_black] pb-6">
-            Automated Market Taker
+            Automated Market Taking
           </span>
         </h1>
 
-        <p className="
+        <p
+          className="
           font-mono text-[clamp(0.95rem,2vw,1.1rem)] leading-[1.7]
-          text-white/75 dark:text-white/80 mb-10 max-w-[520px] mx-auto [text-shadow:0_0_20px_black]">
-          Multichain price volatility harvester protocol
+          text-white/75 dark:text-white/80 mb-10 mx-auto [text-shadow:0_0_20px_black]
+          whitespace-nowrap"
+        >
+          Infrastructure for Turning Price Volatility into yield
         </p>
 
         <Button href={`${APP_URL}/grinders`} size="md">

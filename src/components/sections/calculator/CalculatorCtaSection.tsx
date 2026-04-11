@@ -3,7 +3,7 @@ import { Button } from '../../ui/Button'
 
 export function CalculatorCtaSection() {
   return (
-    <section className="w-full py-24 bg-black border-b border-black/10 dark:border-white/[0.08] relative">
+    <section className="w-full py-14 md:py-16 bg-black border-b border-black/10 dark:border-white/[0.08] relative">
       <div className="max-w-[1280px] mx-auto px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center relative z-10">
@@ -19,7 +19,7 @@ export function CalculatorCtaSection() {
 
             <p className="font-sans text-[1.1rem] text-white/60 mb-10 max-w-[500px] leading-relaxed">
               Curious how much your favorite cryptocurrency fluctuates? See the true power of automated market-taking.
-              The calculator reveals exactly how volatile an asset is—and exactly how much our infrastructure could earn from it.
+              The calculator reveals exactly how volatile an asset is and exactly how much our infrastructure could earn from it.
             </p>
 
             <Button href={`${APP_URL}/calculator`} size="lg">
@@ -44,7 +44,7 @@ export function CalculatorCtaSection() {
                 {/* Mock Input 1 */}
                 <div className="bg-black border border-white/5 rounded-xl p-4 flex justify-between items-center group hover:border-brand-pink/30 transition-colors">
                   <span className="font-sans text-sm text-white/50">Asset Pair</span>
-                  <span className="font-mono font-bold text-white group-hover:text-brand-pink transition-colors">SOL / USDT</span>
+                  <span className="font-mono font-bold text-white group-hover:text-brand-pink transition-colors">SOL / USDC</span>
                 </div>
                 {/* Mock Input 2 */}
                 <div className="bg-black border border-white/5 rounded-xl p-4 flex justify-between items-center group hover:border-brand-pink/30 transition-colors">
@@ -52,9 +52,12 @@ export function CalculatorCtaSection() {
                   <span className="font-mono font-bold text-white">30 Days</span>
                 </div>
                 {/* Mock Input 3 */}
-                <div className="bg-black border border-white/5 rounded-xl p-4 flex justify-between items-center relative overflow-hidden">
-                  <span className="font-sans text-sm text-white/50">Initial Capital</span>
-                  <span className="font-mono font-bold text-white">$10,000</span>
+                <div className="bg-black border border-white/5 rounded-xl p-4 flex justify-between items-center gap-4 relative overflow-hidden">
+                  <span className="font-sans text-sm text-white/50 shrink-0">Initial Capital</span>
+                  <div className="font-mono font-bold text-white text-right leading-snug min-w-0">
+                    <span className="block">25 SOL</span>
+                    <span className="block text-white/70 text-[0.8125rem] font-semibold">5,000 USDC</span>
+                  </div>
                   <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-brand-pink to-transparent w-full"></div>
                 </div>
               </div>

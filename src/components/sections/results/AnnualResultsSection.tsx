@@ -4,53 +4,95 @@ export function AnnualResultsSection() {
       <div className="max-w-[1280px] mx-auto px-8">
         <div className="text-center">
           <h2 className="font-mono font-black text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.2] text-white mb-8">
-            The Power of Volatility Harvesting
+          Strategy Performance
           </h2>
           {/* <p className="font-mono text-[1.1rem] text-white/60 mb-16 max-w-[600px] mx-auto">
             See the difference. While "buy and hold" leaves you exactly where the market decides, our automated strategies continuously extract value.
           </p> */}
         </div>
 
-        {/* Comparison Grid */}
-        <div className="flex gap-8 mb-8">
-
-          {/* Card: Buy and Hold */}
-          <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-8 relative overflow-hidden">
-            <h3 className="font-mono font-bold text-white/50 text-sm uppercase tracking-widest mb-4">Standard</h3>
-            <span className="font-mono font-black text-3xl text-white/80 mb-2">Buy & Hold</span>
-            <div className="w-full bg-white/5 h-2 rounded-full my-6 overflow-hidden">
-              <div className="h-full bg-white/20 w-[15%]"></div>
+        {/* Comparison: mock rising charts */}
+        <div className="flex flex-col gap-8 lg:flex-row">
+          {/* Standard — slow, noisy uptrend */}
+          <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a0a] p-8">
+            <h3 className="mb-1 font-mono text-sm font-bold uppercase tracking-widest text-white/50">Standard</h3>
+            <span className="mb-6 font-mono text-2xl font-black text-white/80 md:text-3xl">Buy &amp; Hold</span>
+            <div className="relative mt-auto min-h-[200px] w-full flex-1">
+              <svg
+                className="h-full w-full min-h-[200px]"
+                viewBox="0 0 400 220"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                aria-hidden
+              >
+                <defs>
+                  <linearGradient id="annual-mock-hold-area" x1="200" y1="0" x2="200" y2="220" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="rgba(255,255,255,0.12)" />
+                    <stop offset="1" stopColor="rgba(255,255,255,0)" />
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="55" x2="400" y2="55" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <line x1="0" y1="110" x2="400" y2="110" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <line x1="0" y1="165" x2="400" y2="165" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <path
+                  d="M0 198 L28 192 L52 188 L76 182 L100 186 L124 172 L148 178 L172 162 L196 168 L220 152 L244 158 L268 142 L292 148 L316 132 L340 128 L364 118 L388 108 L400 98 L400 220 L0 220 Z"
+                  fill="url(#annual-mock-hold-area)"
+                />
+                <path
+                  d="M0 198 L28 192 L52 188 L76 182 L100 186 L124 172 L148 178 L172 162 L196 168 L220 152 L244 158 L268 142 L292 148 L316 132 L340 128 L364 118 L388 108 L400 98"
+                  stroke="rgba(255,255,255,0.45)"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
-            <p className="font-mono text-sm text-white/40 leading-relaxed">
-              Market-dependent yields with zero active value extraction during sideways or choppy price action.
-            </p>
           </div>
 
-          {/* Card: Buy Low Sell High (GrindURUS) */}
-          <div className="bg-[#111] border border-brand-pink/30 rounded-2xl p-8 justify-center relative overflow-hidden shadow-[0_0_40px_rgba(255,105,180,0.05)]">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-pink/10 to-transparent pointer-events-none"></div>
-            <h3 className="font-mono font-bold text-brand-pink text-sm uppercase tracking-widest mb-4 z-10">GrindURUS Protocol</h3>
-            <span className="font-mono font-black text-3xl text-white z-10 mb-2">Buy Low, Sell High</span>
-            <div className="w-full bg-white/10 h-2 rounded-full my-6 overflow-hidden z-10">
-              <div className="h-full w-[85%] relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #ff69b4, #ff1493)' }}>
-                {/* animated shine overlay inside the bar */}
-                <div className="absolute top-0 bottom-0 left-[-100%] w-full bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_2s_infinite]"></div>
-              </div>
+          {/* GrindURUS — steeper harvest curve */}
+          <div className="relative flex min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border border-brand-pink/30 bg-[#111] p-8 shadow-[0_0_40px_rgba(255,105,180,0.05)]">
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand-pink/10 to-transparent" />
+            <h3 className="relative z-10 mb-1 font-mono text-sm font-bold uppercase tracking-widest text-brand-pink">
+              GrindURUS Protocol
+            </h3>
+            <span className="relative z-10 mb-6 font-mono text-2xl font-black text-white md:text-3xl">Buy Low, Sell High</span>
+            <div className="relative z-10 mt-auto min-h-[200px] w-full flex-1">
+              <svg
+                className="h-full w-full min-h-[200px]"
+                viewBox="0 0 400 220"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                aria-hidden
+              >
+                <defs>
+                  <linearGradient id="annual-mock-gru-area" x1="200" y1="0" x2="200" y2="220" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#ff69b4" stopOpacity="0.35" />
+                    <stop offset="1" stopColor="#ff1493" stopOpacity="0" />
+                  </linearGradient>
+                  <linearGradient id="annual-mock-gru-line" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#ff69b4" />
+                    <stop offset="1" stopColor="#ff1493" />
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="55" x2="400" y2="55" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <line x1="0" y1="110" x2="400" y2="110" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <line x1="0" y1="165" x2="400" y2="165" stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
+                <path
+                  d="M0 205 L48 188 L96 168 L144 138 L192 108 L240 78 L288 52 L336 38 L368 28 L400 18 L400 220 L0 220 Z"
+                  fill="url(#annual-mock-gru-area)"
+                />
+                <path
+                  d="M0 205 L48 188 L96 168 L144 138 L192 108 L240 78 L288 52 L336 38 L368 28 L400 18"
+                  stroke="url(#annual-mock-gru-line)"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </div>
-            <p className="font-mono text-sm text-white/70 leading-relaxed z-10">
-              Actively accumulates small spreads on every micro-turn of the market, compounding over time.
-            </p>
           </div>
-
-        </div>
-
-        {/* Conclusion / Why GRAI rises */}
-        <div className="block bg-white/5 border border-white/10 rounded-2xl p-8 text-left relative overflow-hidden">
-          <div className="absolute -top-12 -right-12 w-32 h-32 bg-brand-pink/20 blur-[50px] rounded-full point-events-none"></div>
-          <h3 className="font-mono font-bold text-xl text-white mb-3">Why is GRAI rising in price?</h3>
-          <p className="font-mono text-[0.95rem] text-white/70 leading-[1.8]">
-            Because every automated trade captures market spread. Rather than paying yields out in inflationary governance tokens, the value harvested from volatility is continuously funneled back into the core infrastructure, increasing the underlying fundamental backing of the GRAI token itself.
-          </p>
         </div>
       </div>
     </section>

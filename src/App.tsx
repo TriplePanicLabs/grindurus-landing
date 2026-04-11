@@ -2,6 +2,7 @@ import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import { HeroSection } from './components/sections/hero/HeroSection'
 import { PartnersSection } from './components/sections/partners/PartnersSection'
+import { TeamSection } from './components/sections/team/TeamSection'
 import { StrategySection } from './components/sections/strategy/StrategySection'
 import { GraiProductSection } from './components/sections/product/GraiProductSection'
 import { AnnualResultsSection } from './components/sections/results/AnnualResultsSection'
@@ -21,6 +22,7 @@ function App() {
         <CalculatorCtaSection />
         <InvestmentPathsSection />
         <PartnersSection />
+        <TeamSection />
       </main>
       <Footer />
     </div>

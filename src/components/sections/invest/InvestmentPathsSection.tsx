@@ -32,7 +32,8 @@ export function InvestmentPathsSection() {
             
             <a
               href={`${APP_URL}/grinders`}
-              className="inline-flex items-center justify-center font-mono font-bold text-sm text-black bg-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center font-mono font-bold text-sm text-white px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_4px_24px_rgba(255,105,180,0.4)]"
+              style={{ background: 'linear-gradient(90deg, #ff69b4, #ff1493)' }}
             >
               Enter Crowdfunding Pool
             </a>
@@ -51,7 +52,7 @@ export function InvestmentPathsSection() {
               Private Client
             </h3>
             <p className="font-mono text-white/60 mb-10 leading-relaxed flex-1">
-              If you have a token project or a large treasury, we can market make for you separately. Become a private client and deploy our volatility harvesting infrastructure specifically on your native asset pairs to stabilize price action and grow treasury depth.
+              If you have a token project or a large treasury, we can market take for you separately. Become a private client and deploy our volatility harvesting infrastructure specifically on your native asset pairs to stabilize price action and grow treasury depth.
             </p>
             
             <a

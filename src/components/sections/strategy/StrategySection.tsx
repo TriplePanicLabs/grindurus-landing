@@ -1,6 +1,6 @@
 export function StrategySection() {
   return (
-    <section className="w-full py-24 bg-black border-b border-black/10 dark:border-white/[0.08] relative overflow-hidden">
+    <section className="w-full pt-24 pb-12 md:pb-14 bg-black border-b border-black/10 dark:border-white/[0.08] relative overflow-hidden">
 
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-brand-pink/5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -12,9 +12,17 @@ export function StrategySection() {
           <h2 className="font-mono font-black text-[clamp(2.2rem,4vw,3.5rem)] leading-[1.2] text-white mb-6">
             Dual-Sided Strategy
           </h2>
-          <p className="font-sans text-[1.1rem] text-white/60 max-w-[700px] mx-auto leading-relaxed">
-            Market volatility is an opportunity. Choose to denominate your gains in your base currency or accumulate more of your favorite crypto asset.
-          </p>
+          <div className="mx-auto max-w-[38rem] text-center font-sans text-lg font-normal leading-[1.65] tracking-[-0.01em] text-white/75 antialiased sm:text-xl sm:leading-[1.6] md:text-2xl md:leading-[1.55]">
+            <p className="m-0 text-balance">
+              Market price volatility is an opportunity. 
+            </p>
+            <p className="m-0 mt-3 text-balance sm:mt-3.5 md:mt-4">
+              You don’t need to predict the market.
+            </p>
+            <p className="m-0 mt-3 text-balance sm:mt-3.5 md:mt-4">
+              Your capital works in both modes.
+            </p>
+          </div>
         </div>
 
         {/* Strategy Cards Grid */}
@@ -28,7 +36,7 @@ export function StrategySection() {
             <div className="relative z-10 flex flex-col h-full">
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-white/70 mb-8 w-max">
                 <span className="w-2 h-2 rounded-full bg-brand-pink mr-2 shadow-[0_0_8px_rgba(255,105,180,0.8)]"></span>
-                Standard Target: Stablecoin
+                DIRECT MODE
               </div>
 
               <h3 className="font-mono text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-pink mb-6">
@@ -36,14 +44,9 @@ export function StrategySection() {
               </h3>
 
               <div className="font-sans text-[1.1rem] text-white/60 leading-relaxed mb-10 flex-grow space-y-2">
-                <p>
-                  Fix your profit directly in your base currency.
-                </p>
-                <p>
-                  For example, if you have <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded">USDT</strong>, you use it to buy an asset like <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded">SOL</strong> when the price dips, and you sell it when the price surges back up.
-                </p>
+                <p>Use USDC to buy dips and sell rallies.</p>
                 <p className="font-medium">
-                  Result: Your total USDT balance grows.
+                  Result: Your USDC grows.
                 </p>
               </div>
 
@@ -62,7 +65,7 @@ export function StrategySection() {
 
                   {/* Labels */}
                   <text x="60" y="70" fill="#ff69b4" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">BUY (SOL)</text>
-                  <text x="110" y="7" fill="#fff" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">SELL (+USDT)</text>
+                  <text x="110" y="7" fill="#fff" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">SELL (+USDC)</text>
                 </svg>
               </div>
             </div>
@@ -76,7 +79,7 @@ export function StrategySection() {
             <div className="relative z-10 flex flex-col h-full">
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-white/70 mb-8 w-max">
                 <span className="w-2 h-2 rounded-full bg-brand-red mr-2 shadow-[0_0_8px_rgba(255,20,147,0.8)]"></span>
-                Inverse Target: Crypto Asset
+                INVERSE MODE
               </div>
 
               <h3 className="font-mono text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-red mb-6">
@@ -85,13 +88,10 @@ export function StrategySection() {
 
               <div className="font-sans text-[1.1rem] text-white/60 leading-relaxed mb-10 flex-grow space-y-2">
                 <p>
-                  Multiply your holdings of the underlying asset.
-                </p>
-                <p>
-                  For example, if you already hold <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded">SOL</strong>, you sell it when the market peaks, and then you buy it back after the market corrects.
+                  Sell peaks and rebuy dips.
                 </p>
                 <p className="font-medium">
-                  Result: You receive more SOL than you originally had.
+                  Result: You accumulate more SOL
                 </p>
               </div>
 
@@ -109,7 +109,7 @@ export function StrategySection() {
                   <circle cx="110" cy="55" r="4" fill="#fff" className="animate-pulse" style={{ animationDelay: '1s' }} />
 
                   {/* Labels */}
-                  <text x="60" y="7" fill="#ff1493" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">SELL (USDT)</text>
+                  <text x="60" y="7" fill="#ff1493" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">SELL (USDC)</text>
                   <text x="110" y="70" fill="#fff" fontSize="6" fontFamily="monospace" textAnchor="middle" fontWeight="bold" letterSpacing="1">BUY (+SOL)</text>
                 </svg>
               </div>

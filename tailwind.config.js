@@ -31,11 +31,21 @@ export default {
         'orbit-infinity': {
           to: { marginLeft: '0' },   /* placeholder – animation driven by RAF now */
         },
+        'grai-token-pulse': {
+          '0%, 100%': { opacity: '0.28', transform: 'scale(0.72)' },
+          '50%':      { opacity: '1', transform: 'scale(1.18)' },
+        },
+        'grai-token-glow': {
+          '0%, 100%': { opacity: '0.32' },
+          '50%':      { opacity: '1' },
+        },
       },
       animation: {
-        shimmer:          'shimmer 8s ease-in-out infinite',
-        'marquee-scroll': 'marquee-scroll 30s linear infinite',
-        'orbit-infinity': 'orbit-infinity 0s linear',  /* driven by RAF, not CSS */
+        shimmer:              'shimmer 8s ease-in-out infinite',
+        'marquee-scroll':     'marquee-scroll 30s linear infinite',
+        'orbit-infinity':     'orbit-infinity 0s linear',  /* driven by RAF, not CSS */
+        'grai-token-pulse':   'grai-token-pulse 4.5s ease-in-out infinite',
+        'grai-token-glow':    'grai-token-glow 3.4s ease-in-out infinite',
       },
       minHeight: {
         '70vh': '70vh',
